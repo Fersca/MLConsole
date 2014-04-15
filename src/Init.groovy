@@ -1,4 +1,4 @@
-import framework.Lib
+import render.Lib;
 
 //Inicia la aplicaci—n
 class InitPage {

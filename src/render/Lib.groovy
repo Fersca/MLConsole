@@ -1,9 +1,4 @@
-package framework
-import java.awt.BorderLayout;
-
-import groovy.swing.SwingBuilder
-import javax.swing.JFrame
-import javax.swing.JOptionPane;
+package render
 
 class Lib {
 	
