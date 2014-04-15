@@ -1,4 +1,5 @@
-package framework
+package framework;
+
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -6,7 +7,7 @@ import java.net.URL
 import groovy.json.JsonSlurper
 
 public class HttpClient {
-
+	
 	/**
 	 * Devuelve el contenido de una URL (en formato json plano)
 	 * @param urlToFetch
@@ -44,5 +45,6 @@ public class HttpClient {
 		println "."
 		return result
 	}
-
+	
 }
+		
