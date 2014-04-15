@@ -1,3 +1,6 @@
+import framework.Lib
+import useCases.*
+
 //Inicia la aplicaci—n
 class MainMenu {
 
@@ -7,11 +10,11 @@ class MainMenu {
 		pantalla << ["linea":"Menu principal"]
 		pantalla << ["texto":"Elija la opcion que desea"]
 		pantalla << ["grilla":[	[contenido:"Home",action:{HomePage.view()}],
-								[contenido:"Vip",action:{Vip.view()}],
-								[contenido:"Listados",action:{Listados.view()}]
+								[contenido:"Vip",action:{ViewItemPage.view()}],
+								[contenido:"Listados",action:{Listings.view()}]
 							 ]]
 		pantalla << ["linea":""]
-		Lib.mostrar pantalla
+		Lib.show pantalla
 	}
 	
 }

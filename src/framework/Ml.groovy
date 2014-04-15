@@ -1,24 +1,26 @@
-class HomePage {
+package framework
+class Ml {
 
-	static view() {
+	/**
+	 * Return the list of Featured Real State Agencies
+	 * @param siteId
+	 * @return
+	 */
+	static def getFeaturedRealState(def siteId){
 		
-		//obtiene los destacados
-		def favoritos = getFeaturedItems(Lib.siteId)
-		def hot = getHotItems(Lib.siteId)
-		def news = getMotorNews(Lib.siteId)
+		def result = HttpClient.getContent("https://api.mercadolibre.com/sites/${siteId}/dealers/search?category=${siteId}1743")
 		
-		def pantalla = []
-		pantalla << ["titulo":"Home de ML"]
-		pantalla << ["linea":"Featured Items"]		
-		pantalla << ["grilla":favoritos]
-		pantalla << ["linea":"Hot Items"]
-		pantalla << ["grilla":hot]
-		pantalla << ["linea":"Motors News"]
-		pantalla << ["grilla":news]
-		pantalla << ["linea":""]
+		def realState = []
 		
-		Lib.mostrar pantalla
-			
+		result[0..2].each {
+			def real = [:]
+			real.name = it.name
+			real.link = it.link
+			realState << real
+		}
+		
+		return realState
+
 	}
 	
 	/**
@@ -83,5 +85,5 @@ class HomePage {
 
 		return favoritos
 	}
-	
+
 }

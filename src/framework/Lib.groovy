@@ -1,3 +1,4 @@
+package framework
 import java.awt.BorderLayout;
 
 import groovy.swing.SwingBuilder
@@ -8,7 +9,7 @@ class Lib {
 	
 	public static def siteId
 
-	static mostrar(def pantalla){
+	static show(def pantalla){
 
 		//Clear the console.
 		clearConsole()

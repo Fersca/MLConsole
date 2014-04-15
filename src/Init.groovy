@@ -1,3 +1,5 @@
+import framework.Lib
+
 //Inicia la aplicaci—n
 class InitPage {
 
@@ -29,7 +31,7 @@ class InitPage {
 		pantalla << ["grilla":sitesList]
 		pantalla << ["linea":""]
 		
-		Lib.mostrar pantalla
+		Lib.show pantalla
 			
 	}
 	
